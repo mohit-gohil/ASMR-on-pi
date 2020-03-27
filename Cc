@@ -1,1 +1,5 @@
 #soft
+
+omxplayer file.mp3
+
+omxplayer -o file.mp3
