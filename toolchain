@@ -1,0 +1,13 @@
+sudo apt-get install libc6-armel-cross
+
+sudo binutils-arm-linux-gnueabi libncurses5-dev
+
+
+sudo apt-get install libc6-dev-armel-cross
+
+sudo apt-get build-essentials
+
+
+#if using acqua
+
+sudo apt-get install gcc-arm-linux-gnueabihf g++-arm-linux-gnueabihf
