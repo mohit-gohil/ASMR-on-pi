@@ -5,4 +5,8 @@ sudo apt install crossbuild-essential
 ssh @pi x.x.x.x
 
 
-arm-linux-gnueabihf-g++
+arm-linux-gnueabihf-g++ main.c
+
+cd -o main.c
+
+./main.c
