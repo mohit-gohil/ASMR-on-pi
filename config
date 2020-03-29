@@ -1,11 +1,20 @@
+#run updates first
+sudo apt-get update
+
+sudo apt-get upgrade
+
+
 sudo apt install crossbuild-essential
 
 #config
 
 ssh @pi x.x.x.x
 
-
 arm-linux-gnueabihf-g++ main.c
+
+#use file transfer protocol to transfer the file
+
+sftp pi@x.x.x.x
 
 cd -o main.c
 
