@@ -1,0 +1,8 @@
+sudo apt install crossbuild-essential
+
+#config
+
+ssh @pi x.x.x.x
+
+
+arm-linux-gnueabihf-g++
