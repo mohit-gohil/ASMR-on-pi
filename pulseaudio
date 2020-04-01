@@ -1,0 +1,17 @@
+ps aux | grep pulseaudio
+
+pulseaudio --start
+
+#pair
+bluetoothctl
+power on
+
+agent on
+default-agent
+scan on
+
+pair x:x:x:x:x:x
+trust x:x:x:x:x:x
+connect x:x:x:x:x
+
+
