@@ -1,0 +1,9 @@
+#for a prefix file
+aplay -D bluealsa:DEV=x:x:x:x:x:x,PROFILE=sco /path
+
+#record test
+arecord -D bluealsa:DEV=x:x:x:x:x:x,PROFILE=sco example.wav
+
+#play file
+aplay -D bluealsa:DEV=x:x:x:x:x:x,PROFILE=sco example.wav
+
