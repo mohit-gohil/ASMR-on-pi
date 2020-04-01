@@ -1,0 +1,11 @@
+sudo usermod -G bluetooth -a pi
+
+
+sudo reboot now
+
+#install pulse audio
+
+sudo apt-get install bluealsa pulseaudio
+sudo systemctl status bluetooth.service
+
+sudo reboot now
