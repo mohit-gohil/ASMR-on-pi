@@ -1,0 +1,46 @@
+#in case if you want to just test your raspbian OS try working on an emulator of raspbian 
+
+sudo apt-get install qemu
+sudo apt-get qemu-system-arm
+
+#download raspbian 
+https://www.raspberrypi.org/downloads/
+
+#download kernel for your emulator
+#you can clone the following custom repository by dhruv vyas
+git clone https://github.com/dhruvvyas90/qemu-rpi-kernel
+
+#configuration
+fdisk -l "path of image file"
+
+#youll see something like this
+
+#Disk 2020-02-13-raspbian-buster-full.img: 26.84 GiB, 28798091264 bytes, 56246272 sectors
+#Units: sectors of 1 * 512 = 512 bytes
+#Sector size (logical/physical): 512 bytes / 512 bytes
+#I/O size (minimum/optimal): 512 bytes / 512 bytes
+#Disklabel type: dos
+#Disk identifier: 0x97709164
+
+#Device                               Boot  Start      End  Sectors  Size Id Type
+#2020-02-13-raspbian-buster-full.img1        8192   532479   524288  256M  c W95 FAT32 (LBA)
+#2020-02-13-raspbian-buster-full.img2      532480 14303231 13770752  6.6G 83 Linux
+
+sudo mkdir "folder mount"
+sudo mount -v -o offset="value of img2 start*512" -t ext4 "image path" "mount folder"
+cd "mount folder"
+
+#comment everything out in the following file
+sudo gedit /ld.so.preload
+
+#confirm mounting
+sudo gedit ./etc/fstab
+
+cd ..
+sudo umount "mount directory name"
+
+#start QEMU
+
+qemu-system-arm -kernel "kernel path from copied repository" -cpu "cpu type (check supported types in -machine help)"
+-m "ram value" -M "machine name" -serial stdio -append "root=/dev/sda2 rootfstype=ext4 rw" -hda "image path" -no-reboot
+
