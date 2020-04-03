@@ -1,0 +1,16 @@
+mkdir firstproj
+
+cd firstproj
+gedit test.cpp
+
+#save the program file
+
+qmake -project
+gedit firstproj.pro
+#remove # from
+QT+= gui widgets
+
+make
+./firstproj
+
+
