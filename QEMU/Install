@@ -44,3 +44,5 @@ sudo umount "mount directory name"
 qemu-system-arm -kernel "kernel path from copied repository" -cpu "cpu type (check supported types in -machine help)"
 -m "ram value" -M "machine name" -serial stdio -append "root=/dev/sda2 rootfstype=ext4 rw" -hda "image path" -no-reboot
 
+#details and root guidelines can be found here https://blog.agchapman.com/using-qemu-to-emulate-a-raspberry-pi/
+
