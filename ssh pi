@@ -2,3 +2,5 @@
 
 sudo systemctl enable ssh
 sudo systemctl start ssh
+
+#or can be done with raspi-config
