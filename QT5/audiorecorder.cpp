@@ -71,6 +71,12 @@ AudioRecorder::AudioRecorder()
     ui->audioDeviceBox->addItem(tr("Default"), QVariant(QString()));
     for (auto &device: m_audioRecorder->audioInputs()) {
         ui->audioDeviceBox->addItem(device, QVariant(device));
+    }
+  //audio codecs
+    ui->audioCodecBox->addItem(tr("Default"), QVariant(QString()));
+    for (auto &codecName: m_audioRecorder->supportedAudioCodecs()) {
+        ui->audioCodecBox->addItem(codecName, QVariant(codecName));
+    }      
 
 }
 
