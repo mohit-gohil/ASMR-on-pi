@@ -50,7 +50,7 @@ class QAudioRecorder;
 class QAudioProbe;
 class QAudioBuffer;
 
-class QAudioLevel;
+class AudioLevel;
 
 class AudioRecorder : public QMainWindow
 {
@@ -66,7 +66,6 @@ private slots:
     void setOutputLocation();
     void togglePause();
     void toggleRecord();
-    void audio1();
 
     void updateStatus(QMediaRecorder::Status);
     void onStateChanged(QMediaRecorder::State);
@@ -76,14 +75,14 @@ private slots:
 private:
     void clearAudioLevels();
 
-    Ui::AudioRecorder *ui;
+    Ui::AudioRecorder *ui = nullptr;
 
-    QAudioRecorder *audioRecorder;
-    QAudioProbe *probe;
-    QMediaplayer *audio1;
-    QList<QAudioLevel*> audioLevels;
-    bool outputLocationSet;
+    QAudioRecorder *m_audioRecorder = nullptr;
+    QAudioProbe *m_probe = nullptr;
+    QList<AudioLevel*> m_audioLevels;
+    bool m_outputLocationSet = false;
 
 };
 
 #endif // AUDIORECORDER_H
+  
