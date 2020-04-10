@@ -1,0 +1,8 @@
+QAudioEncoderSettings audioSettings;
+audioSettings.setCodec("audio/amr");
+audioSettings.setQuality(QMultimedia::HighQuality);
+
+recorder->setAudioSettings(audioSettings);
+
+recorder->setOutputLocation(QUrl::fromLocalFile(fileName));
+recorder->record();
