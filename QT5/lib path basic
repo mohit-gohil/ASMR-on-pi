@@ -1,0 +1,14 @@
+MyQtApp/
+
+    MyQtApp.pro
+    src/
+        main.cpp
+    3rdparty/
+        CatWhisperer
+            include/
+                CatWhisperer.h
+            lib/
+                libCatWhisperer.so
+                CatWhisperer.lib
+            bin/
+                CatWhisperer.dll
