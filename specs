@@ -12,3 +12,7 @@ Bluetooth: Bluetooth 4.1 Classic, Bluetooth Low Energy
 GPIO: 40-pin header, populated
 Ports: HDMI, 3.5mm analogue audio-video jack, 4× USB 2.0, Ethernet, Camera Serial Interface (CSI), 
 Display Serial Interface (DSI)
+
+
+#pi pinout documentations
+https://github.com/takiszourntos/teaching/blob/master/documentation/WiringPi_confusing_numbering_scheme_for_GPIOs.png
