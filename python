@@ -1,0 +1,17 @@
+#download setup from the following URL
+
+https://www.python.org/downloads/
+
+#terminal
+
+cd Downloads
+tar -xf Python-3.8.2.tar.xz
+
+./configfile
+make
+make install
+
+#if not logged in as SU try
+make
+sudo make install
+
